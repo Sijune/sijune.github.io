@@ -1,0 +1,352 @@
+/* animation */
+
+@keyframes rolling {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-20%);
+    }
+    50% {
+        transform: translateY(-40%);
+    }
+    75% {
+        transform: translateY(-60%);
+    }
+    100% {
+        transform: translateY(-80%);
+    }
+}
+
+
+/* CSS Reset*/
+
+
+/*브라우저에 있는 최초의 스타일을 없앤다.*/
+
+body,
+ul,
+h1,
+h2,
+h3,
+p,
+dl,
+dd,
+img {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+h1,
+h2,
+h3 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+a {
+    text-decoration-line: none;
+    color: inherit;
+}
+
+
+/*CSS Set*/
+
+body {
+    background: #111;
+    color: #999;
+}
+
+.portrait {
+    background-image: url(images/main4.png);
+    /* height: 400px; */
+    background-size: cover;
+    background-position: center;
+    /*padding-top은 height의 속성이므로 반응형을 위해 사용한다.*/
+    padding-top: 56.25%;
+    /* 400px을 사용하면 height와 동일한 결과가 나온다.*/
+    /*16:9 */
+}
+
+.profile {
+    padding: 5%;
+}
+
+.profile-header,
+.profile-section {
+    padding-bottom: 9%;
+}
+
+.profile-section h2 {
+    font-size: 1.3em;
+    border-top: 3px solid;
+    color: orangered;
+    margin-bottom: 20px;
+    padding: 0.5em 0;
+    position: sticky;
+    top: 0;
+    background-color: #111;
+    box-shadow: 0 0 10px 10px #111;
+}
+
+.name {
+    font-size: 40px;
+    line-height: 2.5;
+    font-style: italic;
+    margin-bottom: 0.4em;
+    font-family: 'Pacifico', cursive;
+    position: sticky;
+    top: -2em;
+    background-color: #111;
+    box-shadow: 0 0 10px 20px #111;
+}
+
+.name-job {
+    display: inline-block;
+    /* background: red; */
+    height: 2em;
+    color: white;
+    vertical-align: top;
+    overflow: hidden;
+    padding-right: 0.5em;
+    position: relative;
+}
+
+.name-job::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    /* border: 1px solid red; */
+    margin-left: -1em;
+    box-shadow: inset 0 0 10px 10px #111;
+}
+
+.name-job-list {
+    /* margin-top: -1.5em; */
+    animation-name: rolling;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+
+.name-title {
+    font-size: 1.5em;
+    line-height: 0.7em;
+    color: deeppink;
+    margin-left: -0.3em;
+    position: relative;
+    margin-bottom: 0.7em;
+    /* positon 속성이 static이 아닌경우 무조건 앞으로 나오게 되어있다. */
+    ;
+}
+
+.information {
+    font-size: 1.2em;
+    line-height: 1.8em;
+    font-weight: 700;
+    /* font-family: 'Nanum Gothic', sans-serif; */
+}
+
+.information dt {
+    float: left;
+    width: 5em;
+    color: orange;
+}
+
+.information dd {
+    color: #ddd;
+    overflow: hidden;
+}
+
+.icons {
+    margin: 20px 0;
+}
+
+.icons a {
+    background-image: url(images/icons.png);
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-indent: -9999px;
+}
+
+.icons a.twitter {
+    background-position: top left;
+}
+
+.icons a.facebook {
+    background-position: top center;
+}
+
+.icons a.pinterest {
+    background-position: top right;
+}
+
+.icons a:hover {
+    background-position-y: bottom;
+}
+
+.timeline {
+    font-size: 1rem;
+    color: #666;
+}
+
+.timeline li {
+    padding-bottom: 30px;
+    line-height: 1.4em;
+    color: #aaa;
+}
+
+.timeline li:last-child {
+    padding-bottom: 0;
+}
+
+.timeline h3 {
+    color: orange;
+    float: left;
+    font-size: 1.1rem;
+    margin-right: 0.5em;
+    border-top: 3px solid;
+    margin-top: 0.1em;
+    padding-top: 0.2em;
+    font-weight: 400;
+    width: 6em;
+    text-align: center;
+}
+
+.portfolio li {
+    margin-bottom: 20px;
+    color: #bbb;
+    font-size: 0.9em;
+    display: flex;
+    flex-direction: row;
+}
+
+.portfolio-img {
+    flex: none;
+    width: 8em;
+    height: 8em;
+}
+
+.portfolio img {
+    width: 80%;
+    height: 80%;
+}
+
+.portfolio .portfolio-desc {
+    line-height: 1.5em;
+}
+
+.portfolio h3 {
+    font-size: 1.1em;
+    color: orange;
+    ;
+}
+
+.portfolio p {
+    font-size: 1em;
+    line-height: 1.3em;
+}
+
+.portfolio p span {
+    color: #eee;
+    font-weight: 700;
+    ;
+}
+
+.graph li {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(62, 62, 193, 1) 0%, rgba(111, 136, 226, 1) 0%, rgba(7, 118, 203, 1) 0%, rgba(66, 201, 208, 1) 100%);
+    color: #fff;
+    padding: 0.5em 1em;
+    margin: 0.4em 0;
+    border-radius: 50px;
+    box-sizing: border-box;
+}
+
+.graph li::before {
+    content: attr(data-score);
+    float: right;
+}
+
+.graph li[data-score="100%"] {
+    width: 100%;
+}
+
+.graph li[data-score="90%"] {
+    width: 90%;
+}
+
+.graph li[data-score="80%"] {
+    width: 80%;
+}
+
+.graph li[data-score="70%"] {
+    width: 70%;
+}
+
+.graph li[data-score="60%"] {
+    width: 60%;
+}
+
+.graph li[data-score="50%"] {
+    width: 50%;
+}
+
+.graph li[data-score="40%"] {
+    width: 40%;
+}
+
+.list dt {
+    color: orange;
+    float: left;
+    width: 4em;
+}
+
+.list dd {
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .profile {
+        padding: 4%;
+    }
+    .portrait {
+        position: fixed;
+        left: 0;
+        top: 0px;
+        width: 60vw;
+        height: 100vh;
+        padding: 0;
+    }
+    .profile {
+        margin-left: 60vw;
+    }
+    .timeline {
+        margin: 0 -10px;
+    }
+    .name {
+        font-size: 4vw;
+    }
+    .timeline li {
+        width: 50%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+    .timeline li:nth-child(even) {
+        margin-left: auto;
+        margin-top: -50px;
+        margin-bottom: -50px;
+    }
+    .timeline li:last-child {
+        margin-bottom: 0;
+        ;
+    }
+}
