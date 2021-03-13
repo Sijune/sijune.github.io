@@ -59,6 +59,7 @@ a {
 body {
     background: #111;
     color: #999;
+    font-family: 'Nanum Gothic', sans-serif;
 }
 
 .portrait {
@@ -217,7 +218,6 @@ body {
     margin-top: 0.1em;
     padding-top: 0.2em;
     font-weight: 400;
-    width: 6em;
     text-align: center;
 }
 
