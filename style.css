@@ -297,6 +297,7 @@ body {
     margin: 0.4em 0;
     border-radius: 50px;
     box-sizing: border-box;
+    font-size: 1em;
 }
 
 .graph li::before {
@@ -330,6 +331,10 @@ body {
 
 .graph li[data-score="40%"] {
     width: 40%;
+}
+
+.list {
+    font-size: 1.1em;
 }
 
 .list dt {
