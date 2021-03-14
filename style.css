@@ -357,7 +357,7 @@ body {
     margin: 0px -20px;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1024px) {
     .profile {
         padding: 4%;
     }
