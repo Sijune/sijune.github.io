@@ -4,17 +4,14 @@
     0% {
         transform: translateY(0);
     }
-    25% {
-        transform: translateY(-20%);
+    33.3% {
+        transform: translateY(-25%);
     }
-    50% {
-        transform: translateY(-40%);
-    }
-    75% {
-        transform: translateY(-60%);
+    66.6% {
+        transform: translateY(-50%);
     }
     100% {
-        transform: translateY(-80%);
+        transform: translateY(-75%);
     }
 }
 
@@ -32,7 +29,9 @@ h3,
 p,
 dl,
 dd,
-img {
+img,
+span,
+audio {
     margin: 0;
     padding: 0;
 }
@@ -149,7 +148,7 @@ body {
 }
 
 .information {
-    font-size: 1.2em;
+    font-size: 1.05em;
     line-height: 1.8em;
     font-weight: 700;
     /* font-family: 'Nanum Gothic', sans-serif; */
@@ -171,27 +170,51 @@ body {
 }
 
 .icons a {
-    background-image: url(images/icons.png);
+    margin-left: 3px;
+}
+
+.icons .instagram {
+    background-image: url(images/instagram_none.png);
     display: inline-block;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    background-position: center;
     text-indent: -9999px;
 }
 
-.icons a.twitter {
-    background-position: top left;
+.icons .instagram:hover {
+    background-image: url(images/instagram.png);
 }
 
-.icons a.facebook {
-    background-position: top center;
+.icons .github {
+    background-image: url(images/github_none.png);
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    background-position: center;
+    text-indent: -9999px;
+    border-radius: 50%;
 }
 
-.icons a.pinterest {
-    background-position: top right;
+.icons .github:hover {
+    background-image: url(images/github.png);
 }
 
-.icons a:hover {
-    background-position-y: bottom;
+.icons .tistory {
+    background-image: url(images/tistory_none.png);
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    background-position: center;
+    text-indent: -9999px;
+    border-radius: 50%;
+}
+
+.icons .tistory:hover {
+    background-image: url(images/tistory.png);
 }
 
 .timeline {
@@ -219,6 +242,11 @@ body {
     padding-top: 0.2em;
     font-weight: 400;
     text-align: center;
+}
+
+.timeline span {
+    font-weight: 600;
+    color: #eee;
 }
 
 .portfolio li {
@@ -314,7 +342,11 @@ body {
     overflow: hidden;
 }
 
-@media (min-width: 768px) {
+.audio {
+    float: right;
+}
+
+@media (min-width: 900px) {
     .profile {
         padding: 4%;
     }
@@ -336,14 +368,10 @@ body {
         font-size: 4vw;
     }
     .timeline li {
-        width: 50%;
+        /* width: 50%; */
         padding: 0 10px;
         box-sizing: border-box;
-    }
-    .timeline li:nth-child(even) {
-        margin-left: auto;
-        margin-top: -50px;
-        margin-bottom: -50px;
+        margin-bottom: 25px;
     }
     .timeline li:last-child {
         margin-bottom: 0;
