@@ -226,6 +226,7 @@ body {
     padding-bottom: 30px;
     line-height: 1.4em;
     color: #aaa;
+    font-size: 1em;
 }
 
 .timeline li:last-child {
