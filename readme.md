@@ -3,5 +3,5 @@
 
 > 주소: sijune.github.io
 ------
-
-<img src="images/sijunelee.png">
+### 캡쳐화면
+![sijunelee](images/sijunelee.png)
