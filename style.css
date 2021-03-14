@@ -81,6 +81,10 @@ body {
     padding-bottom: 9%;
 }
 
+.profile-section:last-child {
+    padding-bottom: 0;
+}
+
 .profile-section h2 {
     font-size: 1.3em;
     border-top: 3px solid;
@@ -349,7 +353,8 @@ body {
 }
 
 .audio {
-    float: right;
+    text-align: center;
+    margin: 0px -20px;
 }
 
 @media (min-width: 900px) {
